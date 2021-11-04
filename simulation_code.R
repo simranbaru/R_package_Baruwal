@@ -1,1 +1,0 @@
-posterior predictive simulation

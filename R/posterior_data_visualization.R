@@ -1,0 +1,1 @@
+I will use the function sim.fbd.taxa to simulate tree for data visualization. 

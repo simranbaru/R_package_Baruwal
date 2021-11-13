@@ -1,0 +1,1 @@
+I will use the original dataset and the simulated data set and carry out the comparision. I will use some test statistics which numerically summarize different aspects of dataset. The output will be mean, median, 1st perentile and 90th percentile. 

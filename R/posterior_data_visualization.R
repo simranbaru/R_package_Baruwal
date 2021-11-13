@@ -1,1 +1,1 @@
-I will use the function sim.fbd.taxa to simulate tree for data visualization. 
+I will use the function sim.fbd.taxa to simulate tree for data visualization. It will give output as a tree. 

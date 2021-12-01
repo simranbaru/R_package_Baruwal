@@ -1,1 +1,14 @@
-I will use the function sim.fbd.taxa to simulate tree for data visualization. It will give output as a tree. 
+#' visualization of data as tree plot
+#'
+#'
+#'
+#'
+#'
+#'
+#'
+#'
+i = 1
+for (i in 1:20) {
+  rangeplot.asymmetric(trees[[i]])
+  }
+

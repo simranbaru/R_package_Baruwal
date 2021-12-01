@@ -1,1 +1,15 @@
-I will use the original dataset and the simulated data set and carry out the comparision. I will use some test statistics which numerically summarize different aspects of dataset. The output will be mean, median, 1st perentile and 90th percentile. 
+#' Comparision of simulated data with emperical data
+#'
+#'
+#'
+#'
+#'
+#'
+#'
+#'
+ 
+i = 1
+for (i in 1:20)
+  simulated_data[i] <- trees[[i]]$root.edge
+mean <- mean(emperical_data)
+ggplot(data.frame(x= simulated_data), aes(simulated_data)) + geom_density() +geom_vline(xintercept = mean, linetype = "dotted", col = 2)

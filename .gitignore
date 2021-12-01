@@ -2,3 +2,9 @@
 .Rhistory
 .RData
 .Ruserdata
+Baruwal_R_Package.Rcheck/
+Baruwal_R_Package*.tar.gz
+Baruwal_R_Package*.tgz
+BaruwalRPackage.Rcheck/
+BaruwalRPackage*.tar.gz
+BaruwalRPackage*.tgz

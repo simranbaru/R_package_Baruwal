@@ -6,6 +6,7 @@
 #' @param lambda Vector of speciation rates, the rate in entry i is the speciation rate prior (ancestral) to time times[i].
 #'
 #'
+ ants <- read_tsv("data/ants_timevary.log")
 lambda <- ants$speciation_rate
 mu <- ants$extinction_rate
 psi <- ants$psi

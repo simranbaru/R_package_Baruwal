@@ -7,7 +7,7 @@
 #'
 #'
 #'
- 
+ants <- read_tsv("data/ants_timevary.log")
 simulated_data <- trees$root.edge[[1]]
 emperical_data <- ants$origin_time
 mean <- mean(emperical_data)

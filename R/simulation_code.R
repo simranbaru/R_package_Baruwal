@@ -4,7 +4,11 @@
 #' @param numbsim Number of trees to simulate
 #' @param mu Extinction rate
 #' @param lambda Vector of speciation rates, the rate in entry i is the speciation rate prior (ancestral) to time times[i].
-#'
+#' @param psi
+#' @param frac 
+#' @return trees
+#' @usage 
+#' trees <- sim.fbd.taxa(n=10, numbsim=1, lambda = 1, mu = 1, psi = 1, frac = .01)
 #'
  ants <- read_tsv("data/ants_timevary.log")
 lambda <- ants$speciation_rate

@@ -1,14 +1,13 @@
 #' visualization of data as tree plot
+#' @param n 
+#' @return plot
+#'@usage
+#' i = 1
+#' for (i in 1:20) {
+#' treeplot(i)
+#' }
 #'
-#'
-#'
-#'
-#'
-#'
-#'
-#'
-i = 1
-for (i in 1:20) {
-  rangeplot.asymmetric(trees[[i]])
-  }
 
+treeplot <- function(n){
+  + plot <- rangeplot.asymmetric(trees[[n]])
+  + return(plot) }

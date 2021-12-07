@@ -10,11 +10,11 @@
 #' @usage 
 #' i = 1
 #' while (i <= 20) {
-#' trees[i] <- (tree(n=10, numbsim=2, lambda[i], mu[i], psi[i], frac = .01))
+#' trees[i] <- (simulation(n=10, numbsim=2, lambda[i], mu[i], psi[i], frac = .01))
 #'  i <- i + 1}
 #'
 
-tree <- function(n,numbsim,lambda,mu,psi,frac){
+simulation <- function(n,numbsim,lambda,mu,psi,frac){
   result <- sim.fbd.taxa(n, numbsim,lambda,mu,psi,frac)
   return(result) }
 

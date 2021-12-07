@@ -10,4 +10,6 @@
 
 treeplot <- function(n){
 plot <- rangeplot.asymmetric(trees[[n]])
-return(plot) }
+return(plot) 
+print(plot)
+}

@@ -19,7 +19,7 @@ library(ggplot2)
 ```
 
 You need to install some fbd R package for this package in run.
-```{r eval=FALSE}
+```{r}
 install.packages("FossilSim")
 library(FossilSim)
 ```
@@ -27,37 +27,84 @@ library(FossilSim)
 Now, we install my R package:
 ```{r}
 devtools::install_github("simranbaru/R_Package_Baruwal")
+library(BaruwalRPackage)
+devtools::load_all()
 ```
 
 Let us download some data for our package:
 
 ```{r}
+download.file(url = "https://raw.githubusercontent.com/simranbaru/R_package_Baruwal/master/data/ants_timevary.log", destfile = "/cloud/project/Vignettes/ants_timevary.log")
 ```
 
-## Working Example
-
-+ An example of each function and how it works 
-+ Explain why to use it
-+ Say something on expected output
+Lets load our data and get started:
 
 ```{r}
-result <- simulateddata 
+ants <- read_tsv("/cloud/project/Vignettes/ants_timevary.log")
+ants
 ```
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+```{r}
+lambda <- ants$speciation_rate
+mu <- ants$extinction_rate
+psi <- ants$psi
+```
 
-```{r cars}
-summary(cars)
+Now, lets simulate the data using function simulation:
+
+```{r} 
+i = 1
+trees <- vector()
+while (i <= 20) {
+trees[i] <- c(BaruwalRPackage::simulation(n=10, numbsim=1, lambda[i], mu[i], psi[i], frac = .01))
+print(trees[i])
+i <- i + 1
+}
+ 
+```
+
+Output:
+```{r}
+i = 1
+for(i in 1:20){
+  simulated_data <- trees[[i]]$root.edge
+}
+emperical_data <- ants$origin_time
+mean <- mean(emperical_data)
+```
+
+#data Visualization using function treeplot
+
+```{r}
+i = 1
+for (i in 1:20) {
+treeplot(i)
+}
+```
+
+Output:
+
+```{r}
+treeplot(1)
+```
+
+Compare the simulated data with emperical data 
+
+Create a dataframe to store all your datas
+```{r}
+datas <- data.frame(c(simulated_data, emperical_data,mean))
+```
+
+#Using function comparision
+```{r}
+comparision(datasdf = datas)
 ```
 
 ## Including Plots
 
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
+```{r datas, echo=FALSE}
+comparision(datasdf = datas)
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+

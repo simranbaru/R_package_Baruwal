@@ -9,5 +9,5 @@
 #'
 
 treeplot <- function(n){
-  + plot <- rangeplot.asymmetric(trees[[n]])
-  + return(plot) }
+plot <- rangeplot.asymmetric(trees[[n]])
+return(plot) }

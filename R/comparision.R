@@ -8,7 +8,8 @@
 
 
 comparision<- function(datasdf){
-p <- ggplot(datasdf, aes(fill = simulated, x = simulated)) + geom_density() + geom_vline(xintercept = mean, linetype = "dotted", col = 2)
-return(p)
-print(p)
+p <- ggplot(datasdf, aes(fill = simulated, x = simulated)) 
+q <- p + geom_density() + geom_vline(xintercept = mean, linetype = "dotted", col = 2)
+return(q)
+print(q)
 }

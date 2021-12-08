@@ -1,7 +1,7 @@
 #' Comparision of simulated data with emperical data
 #'
 #' @param datasdf default dataset to use for plot.
-#' @return p
+#' @return q
 #' @usage 
 #' comparision(datasdf = datas)
 #'

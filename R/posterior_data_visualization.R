@@ -9,7 +9,7 @@
 #'
 
 treeplot <- function(n){
-plot <- rangeplot.asymmetric(trees[[n]])
+plot <- FossilSim::rangeplot.asymmetric(trees[[n]])
 return(plot) 
 print(plot)
 }

@@ -68,7 +68,7 @@ Output:
 ```{r}
 i = 1
 for(i in 1:20){
-  simulated_data <- trees[[i]]$root.edge
+  simulated <- trees[[i]]$root.edge
 }
 emperical_data <- ants$origin_time
 mean <- mean(emperical_data)
@@ -79,7 +79,7 @@ mean <- mean(emperical_data)
 ```{r}
 i = 1
 for (i in 1:20) {
-treeplot(i)
+BaruwalRPackage::treeplot(i)
 }
 ```
 
@@ -93,7 +93,7 @@ Compare the simulated data with emperical data
 
 Create a dataframe to store all your datas
 ```{r}
-datas <- data.frame(c(simulated_data, emperical_data,mean))
+datas <- data.frame(simulated, emperical_data, mean)
 ```
 
 #Using function comparision

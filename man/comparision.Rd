@@ -7,7 +7,7 @@
 comparision(datasdf = datas)
 }
 \arguments{
-\item{datasdf}{The data frame that contains necessary data}
+\item{datasdf}{default dataset to use for plot.}
 }
 \value{
 p

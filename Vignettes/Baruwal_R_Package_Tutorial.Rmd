@@ -67,11 +67,13 @@ i <- i + 1
 Output:
 ```{r}
 i = 1
+simulated <- vector()
 for(i in 1:20){
-  simulated <- trees[[i]]$root.edge
+  simulated[i] <- c(trees[[i]]$root.edge)
 }
 emperical_data <- ants$origin_time
 mean <- mean(emperical_data)
+means <- mean(simulated)
 ```
 
 #data Visualization using function treeplot

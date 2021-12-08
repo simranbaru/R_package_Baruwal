@@ -2,6 +2,8 @@
 #'
 #' @param datasdf default dataset to use for plot.
 #' @return q
+#' @export
+#' 
 #' @usage 
 #' comparision(datasdf = datas)
 #'

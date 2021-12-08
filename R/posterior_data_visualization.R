@@ -1,6 +1,8 @@
 #' visualization of data as tree plot
 #' @param n 
 #' @return plot
+#' @export
+#' 
 #'@usage
 #' i = 1
 #' for (i in 1:20) {

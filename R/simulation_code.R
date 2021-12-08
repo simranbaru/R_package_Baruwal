@@ -7,6 +7,8 @@
 #' @param psi Fossil sampling rate
 #' @param frac The extant tip of tree is n/frac
 #' @return result
+#' @export
+#' 
 #' @usage 
 #' i = 1
 #' while (i <= 20) {

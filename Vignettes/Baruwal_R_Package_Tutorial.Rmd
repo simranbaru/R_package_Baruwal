@@ -109,4 +109,8 @@ comparision(datasdf = datas)
 comparision(datasdf = datas)
 ```
 
+#Calculating effect_size
 
+```{r}
+effect_size(datasdf = datas)
+```

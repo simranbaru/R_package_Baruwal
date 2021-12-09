@@ -1,4 +1,4 @@
-#' visualization of data as tree plot
+#' Visualization of data as tree plot
 #' @param n 
 #' @return plot
 #' @export

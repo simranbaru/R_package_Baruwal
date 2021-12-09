@@ -1,4 +1,4 @@
-#' data simulation
+#' Data simulation
 #'
 #' @param n Number of extant sampled tips
 #' @param numbsim Number of trees to simulate

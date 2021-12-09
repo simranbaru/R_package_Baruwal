@@ -65,8 +65,9 @@ psi <- ants$psi
 This function simulates trees while conditioning on the number of sampled extant taxa using sim.fbd.taxa function. It requires the fossil sampling rate parameter psi as an argument. 
 
 #Working example:
+```{R}
 simulation(n=10, numbsim=1, lambda = 0.01806175, mu = 1.078013e-03 , psi = 5.172419e-02, frac = .01)
-
+```
 Now, lets simulate the data creating a vector using the function simulation:
 
 ```{r} 

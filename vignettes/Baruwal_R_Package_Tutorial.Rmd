@@ -12,23 +12,27 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Data Simulation
 This tutorial uses the function from package FossilSim to simulate datasets from posterior distribution. We quantify some characteristics of both the simulated and emperical(origin time) datasets using test statistics, here, mean and standard deviation. The goal is to check the model accuracy. 
 
-Load in common library 
+You might need to install these packages:
 ```{r}
+install.packages("tidyverse")
+install.packages("ggplot2")
 library(tidyverse)
 library(ggplot2)
-
-```
-
-You need to install some fbd R package for this package in run.
-```{r}
-install.packages("FossilSim")
-library(FossilSim)
 ```
 
 ```{r}
 install.packages("devtools")
 library(devtools)
 ```
+
+
+You need to install FossilSim R package for this package to run.
+# FossilSim is used for simulating trees directly from a fossilized-birth death process using the sim.fbd function. 
+```{r}
+install.packages("FossilSim")
+library(FossilSim)
+```
+
 
 Now, we install my R package:
 ```{r}
@@ -57,7 +61,10 @@ mu <- ants$extinction_rate
 psi <- ants$psi
 ```
 
-Now, lets simulate the data using function simulation:
+## Function: Simulation
+This function simulates trees while conditioning on the number of sampled extant taxa using sim.fbd.taxa function. It requires the fossil sampling rate parameter psi as an argument. 
+
+Now, lets simulate the data using the function simulation:
 
 ```{r} 
 i = 1
@@ -69,20 +76,45 @@ i <- i + 1
 }
  
 ```
+In the above code we have created a loop using 'while' so that we do not need to enter the values manually. Then we have created the variable tree which is a vector to store our data from simulation.  
 
-Output:
+It returns a list of SAtree objects as the simulated trees may contain sampled ancestors as tips with zero-length branches.
+
+We can check the simulated data value using trees[[n]]$root.edge function.
+
+For Example:
+```{r}
+trees[[1]]$root.edge
+```
+It returns the simulated value from first tree simulated. We can do the same for other 19. 
+
+
+If we want to create an object to store the simulated data, we can create a for loop which collects the data at once for all 20 trees. 
 ```{r}
 i = 1
 simulated <- vector()
 for(i in 1:20){
   simulated[i] <- c(trees[[i]]$root.edge)
 }
+```
+
+We also need to create some variable to put our emperical value which is the origin time from our given dataset, and calculate mean for both. 
+```{r}
 emperical_data <- ants$origin_time
 meane <- mean(emperical_data)
 means <- mean(simulated)
 ```
 
-#data Visualization using function treeplot
+## Function treeplot
+This function plots a strati graphic range representation of the tree and fossil samples using rangeplot.asymmetric function. It assumes that all speciation events are asymmetric. 
+
+Working example:
+
+```{r}
+treeplot(1)
+```
+
+Now, lets create a loop for this function that gives the plot for all the simulated data at once.
 
 ```{r}
 i = 1
@@ -91,26 +123,22 @@ BaruwalRPackage::treeplot(i)
 }
 ```
 
-Output:
+## Function comparision
+This function compares the simulated data with the emperical data using emperical mean. It returns the ggplot of simulated data against emperical mean. If the emperical test statistic value is very different from the simulated ones, our model is not doing a good job of replicating some aspect of the process that generated our data. 
 
-```{r}
-treeplot(1)
-```
-
-Compare the simulated data with emperical data 
-
-Create a dataframe to store all your datas
+We can make a dataframe to keep the necessary data for our convenience:
 ```{r}
 datas <- data.frame(simulated, emperical_data, meane, means)
 ```
 
-#Using function comparision
+Working example of the function:
 ```{r}
 comparision(datasdf = datas)
 ```
+It returns a curve for the simulated data and a dotted line for emperical mean. 
 
-
-#Calculating effect_size
+## Function effect_size
+This function calculate the difference between the emperical test statistic value and the median of simulated test statistic divided by the standard deviation of simulated test statistic. It shows how many standard deviations away from the median is the observed value. 
 
 ```{r}
 effect_size(datasdf = datas)

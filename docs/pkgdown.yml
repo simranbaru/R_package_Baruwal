@@ -1,6 +1,7 @@
 pandoc: 2.14.0.3
-pkgdown: 2.0.0
-pkgdown_sha: ~
-articles: {}
-last_built: 2021-12-09T02:03Z
+pkgdown: 2.0.1.9000
+pkgdown_sha: 1c2bedc10283fe39c5e539083021cb87f208903a
+articles:
+  Baruwal_R_Package_Tutorial: Baruwal_R_Package_Tutorial.html
+last_built: 2021-12-09T03:13Z
 

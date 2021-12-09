@@ -2,7 +2,7 @@
 % Please edit documentation in R/posterior_data_visualization.R
 \name{treeplot}
 \alias{treeplot}
-\title{visualization of data as tree plot}
+\title{Visualization of data as tree plot}
 \usage{
 treeplot(1)
 }
@@ -13,5 +13,5 @@ treeplot(1)
 plot
 }
 \description{
-visualization of data as tree plot
+Visualization of data as tree plot
 }

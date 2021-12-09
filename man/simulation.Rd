@@ -2,7 +2,7 @@
 % Please edit documentation in R/simulation_code.R
 \name{simulation}
 \alias{simulation}
-\title{data simulation}
+\title{Data simulation}
 \usage{
 simulation(n=10, numbsim=1, lambda = 0.01806175, mu = 1.078013e-03 , psi = 5.172419e-02, frac = .01)
 }
@@ -23,5 +23,5 @@ simulation(n=10, numbsim=1, lambda = 0.01806175, mu = 1.078013e-03 , psi = 5.172
 result
 }
 \description{
-data simulation
+Data simulation
 }

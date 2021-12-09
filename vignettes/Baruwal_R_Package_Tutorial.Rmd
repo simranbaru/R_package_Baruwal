@@ -10,7 +10,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## Data Simulation
-This tutorial uses the function from package FossilSim to simulate datasets from posterior distribution. We quantify some characteristics of both the simulated and emperical(origin time) datasets using test statistics, here, mean and standard deviation. The goal is to check the model accuracy. 
+This tutorial uses the function from package FossilSim to simulate datasets from posterior distribution. We quantify some characteristics of both the simulated and emperical(origin time) datasets using test statistics, here, mean and standard deviation. The goal is to check the model adequacy. 
 
 You might need to install these packages:
 ```{r}

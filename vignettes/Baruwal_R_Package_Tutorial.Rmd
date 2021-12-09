@@ -109,7 +109,7 @@ means <- mean(simulated)
 ```
 
 ## Function: treeplot
-This function plots a strati graphic range representation of the tree and fossil samples using rangeplot.asymmetric function. It assumes that all speciation events are asymmetric. 
+This function plots a strati graphic range representation of the tree and fossil samples using rangeplot.asymmetric function. It assumes that all speciation events are asymmetric. A strati graphic range represents the interval of time between the first and last appearances of a fossilized species. Thus, this range typically represents multiple fossil specimens observed at different times along a single lineage.  
 
 #Working example:
 

@@ -4,10 +4,7 @@
 \alias{treeplot}
 \title{visualization of data as tree plot}
 \usage{
-i = 1
-for (i in 1:20) {
-treeplot(i)
-}
+treeplot(1)
 }
 \arguments{
 \item{n}{}

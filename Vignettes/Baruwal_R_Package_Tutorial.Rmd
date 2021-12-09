@@ -24,6 +24,11 @@ install.packages("FossilSim")
 library(FossilSim)
 ```
 
+```{r}
+install.packages("devtools")
+library(devtools)
+```
+
 Now, we install my R package:
 ```{r}
 devtools::install_github("simranbaru/R_Package_Baruwal")
@@ -95,7 +100,7 @@ Compare the simulated data with emperical data
 
 Create a dataframe to store all your datas
 ```{r}
-datas <- data.frame(simulated, emperical_data, mean)
+datas <- data.frame(simulated, emperical_data, mean, means)
 ```
 
 #Using function comparision
@@ -103,11 +108,6 @@ datas <- data.frame(simulated, emperical_data, mean)
 comparision(datasdf = datas)
 ```
 
-## Including Plots
-
-```{r datas, echo=FALSE}
-comparision(datasdf = datas)
-```
 
 #Calculating effect_size
 

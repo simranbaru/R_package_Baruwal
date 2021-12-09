@@ -9,7 +9,7 @@
 1.  Installation
 2.  Setup
 
-## Installation
+## Installationgit
 
 How to install: 
 

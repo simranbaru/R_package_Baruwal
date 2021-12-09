@@ -15,7 +15,7 @@
 #'
 
 simulation <- function(n,numbsim,lambda,mu,psi,frac){
-  result <- FossilSim::sim.fbd.taxa(n, numbsim,lambda,mu,psi,frac)
+  result <- FossilSim::sim.fbd.taxa(n, numbsim,lambda,mu,psi,frac, complete = T)
   return(result) 
   }
 

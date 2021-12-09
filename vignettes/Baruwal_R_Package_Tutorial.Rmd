@@ -64,7 +64,10 @@ psi <- ants$psi
 ## Function: Simulation
 This function simulates trees while conditioning on the number of sampled extant taxa using sim.fbd.taxa function. It requires the fossil sampling rate parameter psi as an argument. 
 
-Now, lets simulate the data using the function simulation:
+#Working example:
+simulation(n=10, numbsim=1, lambda = 0.01806175, mu = 1.078013e-03 , psi = 5.172419e-02, frac = .01)
+
+Now, lets simulate the data creating a vector using the function simulation:
 
 ```{r} 
 i = 1
@@ -105,14 +108,15 @@ meane <- mean(emperical_data)
 means <- mean(simulated)
 ```
 
-## Function treeplot
+## Function: treeplot
 This function plots a strati graphic range representation of the tree and fossil samples using rangeplot.asymmetric function. It assumes that all speciation events are asymmetric. 
 
-Working example:
+#Working example:
 
 ```{r}
 treeplot(1)
 ```
+The tips in the resulting SAtree object represent extinction events.
 
 Now, lets create a loop for this function that gives the plot for all the simulated data at once.
 
@@ -123,7 +127,7 @@ BaruwalRPackage::treeplot(i)
 }
 ```
 
-## Function comparision
+## Function: comparision
 This function compares the simulated data with the emperical data using emperical mean. It returns the ggplot of simulated data against emperical mean. If the emperical test statistic value is very different from the simulated ones, our model is not doing a good job of replicating some aspect of the process that generated our data. 
 
 We can make a dataframe to keep the necessary data for our convenience:
@@ -131,13 +135,13 @@ We can make a dataframe to keep the necessary data for our convenience:
 datas <- data.frame(simulated, emperical_data, meane, means)
 ```
 
-Working example of the function:
+#Working example:
 ```{r}
 comparision(datasdf = datas)
 ```
 It returns a curve for the simulated data and a dotted line for emperical mean. 
 
-## Function effect_size
+## Function: effect_size
 This function calculate the difference between the emperical test statistic value and the median of simulated test statistic divided by the standard deviation of simulated test statistic. It shows how many standard deviations away from the median is the observed value. 
 
 ```{r}

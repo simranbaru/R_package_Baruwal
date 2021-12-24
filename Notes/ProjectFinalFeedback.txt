@@ -1,0 +1,20 @@
+Write a tutorial for your R Package
+        The R package must be installable by other members of the class and installation instructions must be included in the tutorial (30%)
+
+Perfect.
+
+        If data are required for your tutorial, instructions to download the data must be included
+Perfect.
+        An example of each function must be included (20%)
+
+Great.
+        Tutorial must be in RMarkdown format (5%)
+Lovely.
+        Tutorial should explain what the function does, and why this is a useful good, or interesting thing to do (15%)
+Wow! Really, really good work! You two really pulled this off.
+
+
+    Render the tutorial and upload it to the package website (20%)
+
+    During class (10%):
+        Make a good faith effort to follow along with other’s tutorials

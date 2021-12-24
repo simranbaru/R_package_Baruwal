@@ -1,5 +1,0 @@
-
-    Write the code for each of your functions: None of the code is in functions. But there is code, so I'll award this half credit. 12/25
-    Document them (Will cover this in class week of Nov. 15): Only simulations.R appears to be documented. 7/25
-    One test per function (Will cover this week of Nov. 15): Tests do not appear to exist. 0/25
-    Add, commit, and push files to GitHub: Looks like it was added, committed and pushed on time. 25/25
